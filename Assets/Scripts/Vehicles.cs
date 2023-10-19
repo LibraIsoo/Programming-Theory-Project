@@ -6,9 +6,6 @@ public class Vehicles : MonoBehaviour
 {
     private float horsePower;
     private float turnSpeed;
-    //Used for planes
-    private float sideTiltSpeed = 80;
-
     public float horizontalInput;
     public float forwardInput;
     public Player playerScript;
