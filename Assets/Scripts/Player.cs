@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     private float verticalInput;
     private float turnSpeed = 100f;
 
-    public float interactionDistance = 5f;
+    public float vehicleInteractionDistance = 6f;
     private Vehicles nearestVehicle = null;
 
     public bool isOnFoot;
@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
         {
             //ABSTRACTION
             MovePlayer();
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 //ABSTRACTION
@@ -54,7 +55,7 @@ public class Player : MonoBehaviour
     {
         GameObject[] vehicles = GameObject.FindGameObjectsWithTag("Vehicle");
 
-        float nearestDistance = interactionDistance;
+        float nearestDistance = vehicleInteractionDistance;
         nearestVehicle = null;
 
         foreach (GameObject vehicleObj in vehicles)
