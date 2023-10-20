@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//INHERITANCE
 public class Plane : Vehicles
 {
     private Rigidbody planeRb;
@@ -9,8 +10,10 @@ public class Plane : Vehicles
     // Start is called before the first frame update
     void Start()
     {
+        //ENCAPSULATION
         HorsePower = 7000f;
         TurnSpeed = 50f;
+
         planeRb = GetComponent<Rigidbody>();
     }
 
@@ -19,11 +22,17 @@ public class Plane : Vehicles
     {
         if (playerScript.isInPlane)
         {
+            //INHERITANCE
+            //POLYMORPHISM
+            //ABSTRACTION
             MoveVehicle(planeRb, Vector3.back);
+
+            //ABSTRACTION
             TiltPlane();
 
             if (Input.GetKeyDown(KeyCode.F))
             {
+                //ABSTRACTION
                 ExitPlane();
             }
         }

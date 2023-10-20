@@ -22,16 +22,19 @@ public class FollowPlayerX : MonoBehaviour
     {
         if (playerScript.isOnFoot)
         {
+            //ABSTRACTION
             FollowPlayer();
         }
 
         if (playerScript.isInCar)
         {
+            //ABSTRACTION
             FollowCar();
         }
 
         if (playerScript.isInPlane)
         {
+            //ABSTRACTION
             FollowPlane();
         }
     }
@@ -41,7 +44,7 @@ public class FollowPlayerX : MonoBehaviour
         // Calculate the desired camera position.
         Vector3 desiredPosition = player.position + player.TransformDirection(offset);
 
-        // Smoothly move the camera to the desired position using Lerp or Slerp.
+        // Smoothly move the camera to the desired position.
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * 5);
 
         // Look at the player's position.

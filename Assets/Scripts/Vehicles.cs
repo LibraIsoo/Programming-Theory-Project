@@ -12,7 +12,8 @@ public class Vehicles : MonoBehaviour
 
     protected Vector3 CalculateExitPosition()
     {
-        // Calculate the exit position based on the local coordinates
+        // Calculate the exit position from vehicle based on the local coordinates
+        //Allowing me to always exit vehicle on driver side
         return transform.TransformPoint(Vector3.left * 3);
     }
 
@@ -22,12 +23,14 @@ public class Vehicles : MonoBehaviour
         
     }
 
+    //ENCAPSULATION
     protected virtual float HorsePower
     { 
         get { return horsePower; } 
         set { horsePower = value; }
     }
 
+    //ENCAPSULATION
     protected virtual float TurnSpeed
     {
         get { return turnSpeed; }

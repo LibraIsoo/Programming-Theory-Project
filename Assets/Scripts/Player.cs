@@ -28,9 +28,11 @@ public class Player : MonoBehaviour
     {
         if (isOnFoot)
         {
+            //ABSTRACTION
             MovePlayer();
             if (Input.GetKeyDown(KeyCode.E))
             {
+                //ABSTRACTION
                 FindNearestVehicle();
             }
         }
